@@ -21,9 +21,6 @@ export class ManufacturerComponent {
     public auth: AuthService
     )
   {
-      this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
-          this.isAuthenticated = isAuthenticated
-        });
       this.getManufacturers();
   };
   
