@@ -39,6 +39,8 @@ import { MatIconModule } from '@angular/material/icon';
         AuthModule.forRoot({
             domain: 'dev-df4ef0cqe070vw4o.us.auth0.com',
             clientId: 'H2eJsWAYVbh21iecMoNMakPztfbcW01X',
+            useRefreshTokens: true,
+            cacheLocation: 'localstorage',
             authorizationParams: {
                 audience: 'http://localhost:5000/',
                 redirect_uri: window.location.origin
