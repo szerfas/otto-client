@@ -42,11 +42,11 @@ import { MatIconModule } from '@angular/material/icon';
             useRefreshTokens: true,
             cacheLocation: 'localstorage',
             authorizationParams: {
-                audience: 'http://localhost:5000/',
+                audience: 'https://localhost:7239/',    //Node=http://localhost:5000/ net=https://localhost:7239/
                 redirect_uri: window.location.origin
             },
             httpInterceptor: {
-                allowedList: [`http://localhost:5000/api/manufacturers`],
+                allowedList: [`http://localhost:5000/api/*`, `https://localhost:7239/api/*`],
             }
         }),
         AuthButtonComponent,
