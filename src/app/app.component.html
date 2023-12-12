@@ -1,10 +1,10 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
     <span>Welcome to Otto</span>
     <span class="example-spacer"></span>
     <button [routerLink]="['/home']" mat-mini-fab color="primary" aria-label="Home">
         <mat-icon>home</mat-icon>
     </button>
-    <button [routerLink]="['/manufacturer']" mat-flat-button color="primary">Manufacturers</button>
+    <button [routerLink]="['/manufacturer']" mat-raised-button >Manufacturers</button>
     <app-auth-button></app-auth-button>
 </mat-toolbar>
 <router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+@import "/src/styles.scss";
+
+@include common;
+
+button {
+    margin-left: 10px;
+  }
+
+mat-list-item .delete-icon {
+  margin-bottom: -5px;
+  display: none;
+}
+
+mat-list-item:hover .delete-icon {
+  margin-bottom: -5px;
+  display: inline-block;
+}

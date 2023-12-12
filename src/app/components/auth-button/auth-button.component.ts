@@ -10,13 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
   styles: [ 'button { margin-left: 10px; }'],
   template: `
     <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-      <button mat-flat-button color="primary" (click)="auth.logout({ logoutParams: { returnTo: 'http://localhost:4200/' } })">
+      <button mat-raised-button (click)="auth.logout({ logoutParams: { returnTo: 'http://localhost:4200/' } })">
         Log out
       </button>
     </ng-container>
 
     <ng-template #loggedOut>
-      <button mat-flat-button color="primary" (click)="auth.loginWithRedirect()">Log in</button>
+      <button mat-raised-button (click)="auth.loginWithRedirect()">Log in</button>
     </ng-template>
   `,
 })

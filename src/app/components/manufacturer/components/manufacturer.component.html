@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <span>Manufacturer</span>
+    <button (click)="addManufacturerDialog()" mat-icon-button color="primary" aria-label="Add">
+        <mat-icon>add</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-list *ngFor="let manufacturer of manufacturers" role="list">
+    <mat-list-item role="listitem">
+        {{manufacturer.name}}
+        <mat-icon (click)="deleteManufacturer(manufacturer)" class="delete-icon">delete</mat-icon>
+    </mat-list-item>
+</mat-list>

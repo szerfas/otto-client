@@ -8,7 +8,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
-import { AuthButtonComponent } from "./auth-button/auth-button.component";
+import { AuthButtonComponent } from "./components/auth-button/auth-button.component";
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';

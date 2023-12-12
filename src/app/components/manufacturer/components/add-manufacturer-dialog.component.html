@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Add Manufacturer</h2>
+
+<mat-dialog-content>
+
+    <form [formGroup]="manufacturerForm" (ngSubmit)="addNewManufacturer()">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+    
+        <mat-dialog-actions align="end">
+            <button type="submit" [disabled]="!manufacturerForm.valid">Submit</button>
+            <button (click)="close()" mat-button>Cancel</button>
+        </mat-dialog-actions>
+    </form>
+
+</mat-dialog-content>

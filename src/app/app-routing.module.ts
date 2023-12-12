@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@auth0/auth0-angular';
-import { ManufacturerComponent } from './components/manufacturer/manufacturer.component';
-import { HomeComponent } from './home/home.component';
+import { ManufacturerComponent } from './components/manufacturer/components/manufacturer.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', title: 'Home Page', component: HomeComponent },
