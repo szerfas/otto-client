@@ -20,7 +20,7 @@ import { Manufacturer } from '../models/manufacturer';
   styleUrls: ['./manufacturer.component.scss']
 })
 export class ManufacturerComponent {
-  isAuthenticated = false;
+  manufacturers: any;
   
   constructor(
     private http: HttpClient,
@@ -30,19 +30,17 @@ export class ManufacturerComponent {
     )
   {};
   
-  manufacturers: any;
-  
   ngOnInit() {
     this.getManufacturers();
   }
 
   getManufacturers() {
-    this.manufacturerService.getManufacturers().subscribe(
-      (response) => {
+    this.manufacturerService.getManufacturers().subscribe({
+      next: (response) => {
         this.manufacturers = response;      
       },
-      (error) => { console.log(error);}
-    )
+      error: (error) => { console.log(error);}
+    })
   }
 
   addManufacturerDialog() {
